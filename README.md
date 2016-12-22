@@ -21,23 +21,24 @@ compileOptions{
 
 #####1.第一种方式,无参数+语句(代码块)：适用于匿名内部类中方法无参数的情况
 
-```java    /**
-            * 第一种方式,无参数+语句(代码块)：适用于匿名内部类中方法无参数的情况
-            * () -> 语句
-            * 或
-            * () -> {代码块}
-            **/
-           private void threadTest() {
-               /**普通写法**/
-               new Thread(new Runnable() {
-                   @Override
-                   public void run() {
+```java
+    /**
+     * 第一种方式,无参数+语句(代码块)：适用于匿名内部类中方法无参数的情况
+     * () -> 语句
+     * 或
+     * () -> {代码块}
+     **/
+    private void threadTest() {
+        /**普通写法**/
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
 
-                   }
-               }).start();
-               /**使用lambda表达式写法**/
-               new Thread(() -> Log.d(TAG, "this is a lambda Thread")).start();
-           }
+            }
+        }).start();
+        /**使用lambda表达式写法**/
+        new Thread(() -> Log.d(TAG, "this is a lambda Thread")).start();
+    }
 ```
 
 #####2.第二种方式，有参数+语句：适用于匿名内部类中方法只有一个参数的情况
