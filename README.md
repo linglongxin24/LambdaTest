@@ -38,7 +38,6 @@ compileOptions{
                /**使用lambda表达式写法**/
                new Thread(() -> Log.d(TAG, "this is a lambda Thread")).start();
            }
-
 ```
 
 #####2.第二种方式，有参数+语句：适用于匿名内部类中方法只有一个参数的情况
@@ -61,10 +60,10 @@ compileOptions{
         /**使用lambda表达式写法**/
         findViewById(R.id.button).setOnClickListener(v -> Log.d(TAG, "this is a lambda onClick"));
     }
-
 ```
 
 #####2.第二种方式，有参数+语句：适用于匿名内部类中方法只有一个参数的情况
+
 
 ```java
     /**
